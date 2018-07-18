@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crop Growth Tracker</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+	<script type="text/javascript">
+
+function FertilizerCheck() {
+    if (document.getElementById('fertilizers-radios-0').checked) {
+        document.getElementById('ifFertilizer').style.display = 'block';
+    }
+    else document.getElementById('ifFertilizer').style.display = 'none';
+
+}
+
+</script>
+
+	<script type="text/javascript">
+
+function PesticideCheck() {
+    if (document.getElementById('pesticide-radios-0').checked) {
+        document.getElementById('ifPesticide').style.display = 'block';
+    }
+    else document.getElementById('ifPesticide').style.display = 'none';
+
+}
+
+</script>
+
+<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        format: "dd MM yyyy - hh:ii"
+    });
+</script>     
+
+</head>
+<body>
+<form method="POST" action="http://formspree.io/gupta.puneet0696@gmail.com" class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Crop Growth Tracker</legend>
+
+<!-- Text input-->
+<div class="form-row">
+	<div class="form-group col-md-6">
+	  <label class="col-md-6 control-label" for="cropname-text">Crop Name</label>  
+	  <div class="col-md-6">
+	  <input id="cropname-text" name="cropname-text" type="text" placeholder="" class="form-control input-md">
+	  <!-- <span class="help-block">Name of the Crop</span>   -->
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group col-md-6">
+	  <label class="col-md-6 control-label" for="variety-text">Variety</label>  
+	  <div class="col-md-6">
+	  <input id="variety-text" name="variety-text" type="text" placeholder="" class="form-control input-md">
+	  <!-- <span class="help-block">Crop Variety</span>   -->
+	  </div>
+	</div>
+</div>
+
+
+
+<!-- Text input-->
+<div class="form-row">
+	<div class="form-group col-md-6">
+	  <label class="col-md-6 control-label" for="irrigation-text">Irrigation Pattern</label>  
+	  <div class="col-md-6">
+	  <input id="irrigation-text" name="irrigation-text" type="text" placeholder="" class="form-control input-md">
+	  <!-- <span class="help-block">Irrigation Pattern</span>   -->
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="form-group col-md-6">
+	  <label class="col-md-6 control-label" for="manure-text">Manure Applied</label>  
+	  <div class="col-md-6">
+	  <input id="manure-text" name="manure-text" type="text" placeholder="" class="form-control input-md">
+	  <!-- <span class="help-block">Name of the manur applied</span>   -->
+	  </div>
+	</div>
+</div>
+
+<!-- Date Time Input -->
+<div class="form-row">
+<div class="form-group col-md-6">
+	<label class="col-md-6 control-label" for="sowing-date-time">Sowing Date & Time</label>  
+	<div class="col-md-6">
+		<input id="sowing-date-time" name="sowing-date-time" type="datetime-local" placeholder="" class="form-control input-md">
+  <!-- <span class="help-block">Irrigation Pattern</span>   -->
+	</div>
+</div>
+</div>
+
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fertilizers-radios">Organic Fertilizers Used</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="fertilizers-radios-0">
+      <input type="radio" onclick="javascript:FertilizerCheck();" name="fertilizers-radios" id="fertilizers-radios-0" value="1">
+      Yes
+    </label>
+	</div>
+  <div class="radio">
+    <label for="fertilizers-radios-1">
+      <input type="radio" onclick="javascript:FertilizerCheck();" name="fertilizers-radios" id="fertilizers-radios-1" value="2">
+      No
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group" id="ifFertilizer" style="display:none">
+  <label class="col-md-4 control-label" for="fertilizers-text"></label>  
+  <div class="col-md-4">
+  <span class="help-block">Name of the organic fertilizers used</span>  
+  <input id="fertilizers-text" name="fertilizers-text" type="text" placeholder="" class="form-control input-md">
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="pesticide-radios">Organic Pesticide Applied</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="pesticide-radios-0">
+      <input type="radio" onclick="javascript:PesticideCheck();" name="pesticide-radios" id="pesticide-radios-0" value="1">
+      Yes
+    </label>
+	</div>
+  <div class="radio">
+    <label for="pesticide-radios-1">
+      <input type="radio" onclick="javascript:PesticideCheck();" name="pesticide-radios" id="pesticide-radios-1" value="2">
+      No
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group" id="ifPesticide" style="display:none">
+  <label class="col-md-4 control-label" for="pesticide-text"></label>  
+  <div class="col-md-4">
+  <span class="help-block">Name of the organic pesticides applied</span>  
+  <input id="pesticide-text" name="pesticide-text" type="text" placeholder="" class="form-control input-md">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="problems-faced">Problems Faced</label>  
+  <div class="col-md-4">
+  <input id="problems-faced" name="problems-faced" type="text" placeholder="" class="form-control input-md">
+  <!-- <span class="help-block">Problems faced</span>   -->
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+</body>
+</html>
