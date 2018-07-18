@@ -2,6 +2,13 @@
 <html>
 <head>
     <meta name="referrer" content="origin">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+<style>
+.w3-allerta {
+  font-family: "Allerta Stencil", Sans-serif;
+}
+</style>
 	<title>Crop Growth Tracker</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 	<script type="text/javascript">
@@ -36,64 +43,66 @@ function PesticideCheck() {
 
 </head>
 <body>
+<center>
 <form method="POST" action="http://formspree.io/gupta.puneet0696@gmail.com" class="form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
-<legend>Crop Growth Tracker</legend>
-
+<div class="w3-container w3-black w3-center w3-allerta">
+<legend class="w3-xxlarge">Crop Growth Tracker</legend>
+</div>
 <!-- Text input-->
-<div class="form-row">
-	<div class="form-group col-md-6">
-	  <label class="col-md-6 control-label" for="cropname-text">Crop Name</label>  
-	  <div class="col-md-6">
-	  <input id="cropname-text" name="cropname-text" type="text" placeholder="" class="form-control input-md">
+<!-- <div class="form-row"> -->
+	<div class="form-group col-md-4">
+	  <label class=" control-label" for="cropname-text">Crop Name</label>  
+	  <div class="">
+	  <input id="cropname-text" name="Crop Name" type="text" placeholder="" class="form-control input-md">
 	  <!-- <span class="help-block">Name of the Crop</span>   -->
 	  </div>
 	</div>
 
 	<!-- Text input-->
-	<div class="form-group col-md-6">
-	  <label class="col-md-6 control-label" for="variety-text">Variety</label>  
-	  <div class="col-md-6">
-	  <input id="variety-text" name="variety-text" type="text" placeholder="" class="form-control input-md">
+	<div class="form-group col-md-4">
+	  <label class=" control-label" for="variety-text">Variety</label>  
+	  <div class="">
+	  <input id="variety-text" name="Variety" type="text" placeholder="" class="form-control input-md">
 	  <!-- <span class="help-block">Crop Variety</span>   -->
 	  </div>
 	</div>
-</div>
+<!-- </div> -->
 
 
 
 <!-- Text input-->
-<div class="form-row">
-	<div class="form-group col-md-6">
-	  <label class="col-md-6 control-label" for="irrigation-text">Irrigation Pattern</label>  
-	  <div class="col-md-6">
-	  <input id="irrigation-text" name="irrigation-text" type="text" placeholder="" class="form-control input-md">
+<!-- <div class="form-row"> -->
+	<div class="form-group col-md-4">
+	  <label class=" control-label" for="irrigation-text">Irrigation Pattern</label>  
+	  <div class="">
+	  <input id="irrigation-text" name="Irrigation Pattern" type="text" placeholder="" class="form-control input-md">
 	  <!-- <span class="help-block">Irrigation Pattern</span>   -->
 	  </div>
 	</div>
 
 	<!-- Text input-->
-	<div class="form-group col-md-6">
-	  <label class="col-md-6 control-label" for="manure-text">Manure Applied</label>  
-	  <div class="col-md-6">
-	  <input id="manure-text" name="manure-text" type="text" placeholder="" class="form-control input-md">
+	<div class="form-group col-md-4">
+	  <label class=" control-label" for="manure-text">Manure Applied</label>  
+	  <div class="">
+	  <input id="manure-text" name="Manure Applied" type="text" placeholder="" class="form-control input-md">
 	  <!-- <span class="help-block">Name of the manur applied</span>   -->
 	  </div>
 	</div>
 </div>
 
 <!-- Date Time Input -->
-<div class="form-row">
-<div class="form-group col-md-6">
-	<label class="col-md-6 control-label" for="sowing-date-time">Sowing Date & Time</label>  
-	<div class="col-md-6">
-		<input id="sowing-date-time" name="sowing-date-time" type="datetime-local" placeholder="" class="form-control input-md">
+<!-- <div class="form-row"> -->
+<div class="form-group col-md-4">
+	<label class=" control-label" for="sowing-date-time">Sowing Date & Time</label>  
+	<div class="">
+		<input id="sowing-date-time" name="Sowing Date & Time" type="datetime-local" placeholder="" class="form-control input-md">
   <!-- <span class="help-block">Irrigation Pattern</span>   -->
 	</div>
 </div>
-</div>
+<!-- </div> -->
 
 
 <!-- Multiple Radios -->
@@ -120,7 +129,7 @@ function PesticideCheck() {
   <label class="col-md-4 control-label" for="fertilizers-text"></label>  
   <div class="col-md-4">
   <span class="help-block">Name of the organic fertilizers used</span>  
-  <input id="fertilizers-text" name="fertilizers-text" type="text" placeholder="" class="form-control input-md">
+  <input id="fertilizers-text" name="Organic Fertilizers Used" type="text" placeholder="" class="form-control input-md">
   </div>
 </div>
 
@@ -148,7 +157,7 @@ function PesticideCheck() {
   <label class="col-md-4 control-label" for="pesticide-text"></label>  
   <div class="col-md-4">
   <span class="help-block">Name of the organic pesticides applied</span>  
-  <input id="pesticide-text" name="pesticide-text" type="text" placeholder="" class="form-control input-md">
+  <input id="pesticide-text" name="Organic Pesticides Used" type="text" placeholder="" class="form-control input-md">
   </div>
 </div>
 
@@ -156,7 +165,7 @@ function PesticideCheck() {
 <div class="form-group">
   <label class="col-md-4 control-label" for="problems-faced">Problems Faced</label>  
   <div class="col-md-4">
-  <input id="problems-faced" name="problems-faced" type="text" placeholder="" class="form-control input-md">
+  <input id="problems-faced" name="Problems Faced" type="text" placeholder="" class="form-control input-md">
   <!-- <span class="help-block">Problems faced</span>   -->
   </div>
 </div>
@@ -171,6 +180,7 @@ function PesticideCheck() {
 
 </fieldset>
 </form>
+</center>
 
 
 </body>
